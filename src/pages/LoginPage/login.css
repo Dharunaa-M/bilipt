@@ -91,3 +91,28 @@
     line-height: 5.08;
     color: #000;
 }
+
+.input-group div p {
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 13px;
+    line-height: 3;
+    letter-spacing: normal;
+    color: #000;
+}
+
+.change-pass-section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.back {
+    cursor: pointer;
+    width: 32px;
+    height: 31px;
+    flex-grow: 0;
+    border-radius: 100%;
+    padding: 4px 3px;
+    background-color: #f5f6f8;
+}
