@@ -1,0 +1,43 @@
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #000;
+    width: 123px;
+    height: 100vh;
+    background-color: #d4d6c9;
+}
+
+.nav-container img {
+    width: 121px;
+    height: 120px;
+}
+
+.link {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0 0 8px;
+}
+
+.link .icon {
+    width: 21.7px;
+    height: 18.4px;
+}
+
+.link .icon span {
+    width: 41px;
+    height: 23px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 5.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
