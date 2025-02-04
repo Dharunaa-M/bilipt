@@ -1,0 +1,42 @@
+.card{
+    width: 668px;
+    height: 200px;
+    margin: 30px 28px 30px 28px;
+}
+.canvas{
+    width: 721.1px;
+    border: solid 2px #f9f9fb;
+}
+.title{
+    background-color: #f9f9fb;
+    padding: 18px 0px 18px 25px;
+    font-size: 16px;
+}
+.desclaimer{
+    font-weight: normal;
+    font-size: 12.8px;
+    font-family: "Poppins", sans-serif;
+    margin: 22px 40px 22px 40px;
+}
+.totalcoincont{
+    display: flex;
+    gap: 50px;
+    margin-left: 50px;
+}
+.green{
+    color: #54a98f;
+}
+.red{
+    color: #e54643;
+}
+.fonttype{
+    font-size: 16px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+.fontstyle{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}

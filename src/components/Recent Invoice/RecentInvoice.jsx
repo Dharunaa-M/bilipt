@@ -11,7 +11,7 @@ const RecentInvoice = () => {
       </div>
       {Array(22)
         .fill("")
-        .map((idx) => (
+        .map((_, idx) => (
           <div className="invoice-section" key={idx}>
             <div className="industry">
               <h4 className="m-0">Industry A</h4>
