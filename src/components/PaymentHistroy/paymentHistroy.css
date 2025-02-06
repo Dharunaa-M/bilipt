@@ -1,0 +1,18 @@
+.payment-container {
+    padding: 38px 36px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.payment-container h3 {
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 0.76;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}

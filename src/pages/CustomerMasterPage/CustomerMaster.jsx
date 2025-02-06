@@ -1,5 +1,10 @@
 import React, { useState } from "react";
+import { FaSave } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { MdOutlineCleaningServices } from "react-icons/md";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 import InputComponent from "../../components/Input/InputComponent";
+import PaymentHistroy from "../../components/PaymentHistroy/PaymentHistroy";
 import "./customerMaster.css";
 
 const CustomerMaster = () => {
@@ -7,7 +12,7 @@ const CustomerMaster = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(null);
   const [address, setAddress] = useState("");
-
+  const [openPayemntHistroy, setOpenPaymentHistroy] = useState(false);
 
   return (
     <>
@@ -44,7 +49,32 @@ const CustomerMaster = () => {
             onChange={setAddress}
             value={address}
           />
+          <div className="mt-3">
+            <div className="d-flex flex-row gap-4 justify-content-end">
+              <div className="frame" onClick={() => setOpenPaymentHistroy(true)} >
+                <span>Payment Histroy</span> <FaSave />
+              </div>
+              <div className="frame">
+                <span>Save</span> <FaSave />
+              </div>
+              <div className="frame">
+                <span>Delete</span> <RiDeleteBin6Fill />
+              </div>
+              <div className="frame">
+                <span>Clear</span> <MdOutlineCleaningServices />
+              </div>
+              <div className="me-4 frame">
+                <span>Close</span> <IoMdClose />
+              </div>
+            </div>
+          </div>
         </div>
+        {openPayemntHistroy && (
+          <PaymentHistroy 
+            show={openPayemntHistroy}
+            onSet={setOpenPaymentHistroy}
+          />
+        )}
       </div>
     </>
   );
