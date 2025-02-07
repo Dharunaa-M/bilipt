@@ -16,6 +16,34 @@ const PaymentHistroy = ({ show, onSet }) => {
               </div>
               <MdClose onClick={() => onSet(false)} />
             </div>
+            <div className="mt-3">
+              <table  className="table text-center">
+                <thead className="head-row">
+                  <tr>
+                    <th>Bill no</th>
+                    <th>Customer name</th>
+                    <th>Paid</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    Array(5).fill("").map((_) => (
+                      <tr>
+                        <td>123</td>
+                        <td>Dharun</td>
+                        <td>2000</td>
+                        <td>60000</td>
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </table>
+                <div className="my-5 d-flex justify-content-start gap-2 align-content-center">
+                  <p>Total Payment Outstanding:</p>
+                  <div>&#8377;0</div>
+                </div>
+            </div>
           </Modal.Body>
         </Modal>
     </>
