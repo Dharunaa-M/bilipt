@@ -1,15 +1,3 @@
-// import React from 'react'
-// import "./inputComponent.css"
-
-// const InputComponent = () => {
-//   return (
-//     <div>
-
-//     </div>
-//   )
-// }
-
-// export default InputComponent
 import React from "react";
 import "./inputComponent.css";
 const InputComponent = ({
@@ -44,7 +32,9 @@ const InputComponent = ({
       <div className="d-flex flex-column gap-3">
         <label className="form-label">
           {labelVal}
-          {isRequired && <span style={{ color: "#e54643" }}>*</span>}
+          {isRequired && (
+            <span style={{ color: "#e54643", marginLeft: "6px" }}>*</span>
+          )}
         </label>
         <input
           style={{

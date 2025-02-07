@@ -14,6 +14,22 @@ const CustomerMaster = () => {
   const [address, setAddress] = useState("");
   const [openPayemntHistroy, setOpenPaymentHistroy] = useState(false);
 
+  const handleSave = () => {
+    console.log("Save clicked!")
+  }
+
+  const handleDelete = () => {
+    console.log("Delete clicked!")
+  }
+
+  const handleClear = () => {
+    console.log("Clear clicked!")
+  }
+
+  const handleClose = () => {
+    console.log("Close clicked")
+  }
+
   return (
     <>
       <div className="d-block w-100">
@@ -54,16 +70,16 @@ const CustomerMaster = () => {
               <div className="frame" onClick={() => setOpenPaymentHistroy(true)} >
                 <span>Payment Histroy</span> <FaSave />
               </div>
-              <div className="frame">
+              <div className="frame" onClick={handleSave}>
                 <span>Save</span> <FaSave />
               </div>
-              <div className="frame">
+              <div className="frame" onClick={handleDelete}>
                 <span>Delete</span> <RiDeleteBin6Fill />
               </div>
-              <div className="frame">
+              <div className="frame" onClick={handleClear}>
                 <span>Clear</span> <MdOutlineCleaningServices />
               </div>
-              <div className="me-4 frame">
+              <div className="me-4 frame" onClick={handleClose}>
                 <span>Close</span> <IoMdClose />
               </div>
             </div>
@@ -73,6 +89,7 @@ const CustomerMaster = () => {
           <PaymentHistroy 
             show={openPayemntHistroy}
             onSet={setOpenPaymentHistroy}
+            totalPayment={0}
           />
         )}
       </div>

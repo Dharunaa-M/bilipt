@@ -17,6 +17,10 @@
     margin: 0;
 }
 
+.table {
+    margin-top: 30px !important;
+    margin-bottom: 250px !important;
+}
 
 .table .head-row {
     padding: 10px 43px;
@@ -36,3 +40,42 @@
     letter-spacing: normal;
     color: #000;
 }
+
+.data {
+    font-family: "Poppins";
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.71;
+    letter-spacing: normal;
+    color: #000;
+}
+
+.payment-out {
+    margin-bottom: 0;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+
+.tot-payment {
+    width: 128px;
+    height: 26px;
+    flex-grow: 0;
+    margin: 0 0 0 9px;
+    padding: 2px 4px;
+    border: solid 1px #8f8b8b;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #000;
+}
+

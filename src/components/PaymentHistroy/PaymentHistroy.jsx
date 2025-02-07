@@ -4,7 +4,7 @@ import "./paymentHistroy.css"
 import { FaBusinessTime } from "react-icons/fa";
 import { MdClose } from 'react-icons/md';
 
-const PaymentHistroy = ({ show, onSet }) => {
+const PaymentHistroy = ({ show, onSet, totalPayment }) => {
   return (
     <>
         <Modal show={show} size='md' centered>
@@ -17,7 +17,7 @@ const PaymentHistroy = ({ show, onSet }) => {
               <MdClose onClick={() => onSet(false)} />
             </div>
             <div className="mt-3">
-              <table  className="table text-center">
+              <table className="table text-center">
                 <thead className="head-row">
                   <tr>
                     <th>Bill no</th>
@@ -30,18 +30,18 @@ const PaymentHistroy = ({ show, onSet }) => {
                   {
                     Array(5).fill("").map((_) => (
                       <tr>
-                        <td>123</td>
-                        <td>Dharun</td>
-                        <td>2000</td>
-                        <td>60000</td>
+                        <td className="data">123</td>
+                        <td className="data">Dharun</td>
+                        <td className="data">2000</td>
+                        <td className="data">60000</td>
                       </tr>
                     ))
                   }
                 </tbody>
               </table>
                 <div className="my-5 d-flex justify-content-start gap-2 align-content-center">
-                  <p>Total Payment Outstanding:</p>
-                  <div>&#8377;0</div>
+                  <p className="payment-out">Total Payment Outstanding:</p>
+                  <div className="tot-payment">&#8377;{totalPayment}</div>
                 </div>
             </div>
           </Modal.Body>
