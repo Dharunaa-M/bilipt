@@ -6,6 +6,7 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import InputComponent from "../../components/Input/InputComponent";
 import PaymentHistroy from "../../components/PaymentHistroy/PaymentHistroy";
 import "./customerMaster.css";
+import HeaderComponent from "../../components/Header/HeaderComponent";
 
 const CustomerMaster = () => {
   const [name, setName] = useState("");
@@ -33,7 +34,7 @@ const CustomerMaster = () => {
   return (
     <>
       <div className="d-block w-100">
-        <h2 className="customer-heading">CUSTOMER MASTER</h2>
+        <HeaderComponent headerText="CUSTOMER MASTER" />
         <div className="customer-container">
           <InputComponent
             labelVal="Name"

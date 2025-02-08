@@ -4,6 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import InputComponent from "../../components/Input/InputComponent";
 import "./productMaster.css";
+import HeaderComponent from "../../components/Header/HeaderComponent";
 
 const ProductMaster = () => {
   const handleView = () => {
@@ -25,7 +26,7 @@ const ProductMaster = () => {
   return (
     <>
       <div className="d-block w-100">
-        <h2 className="master-heading">PRODUCT MASTER</h2>
+        <HeaderComponent headerText="PRODUCT MASTER" />
         <div>
           <div className="master-container">
             <div className="name">

@@ -9,12 +9,13 @@ import RangeComponent from "../../components/Range/RangeComponent";
 import RecentInvoice from "../../components/Recent Invoice/RecentInvoice";
 import TodaySales from "../../components/Today Sales/TodaySales";
 import "./dashboard.css";
+import HeaderComponent from "../../components/Header/HeaderComponent";
 
 const Dashboard = () => {
   return (
     <>
       <div className="d-block w-100">
-        <h1 className="dashboard-heading">DASHBOARD</h1>
+        <HeaderComponent headerText="DASHBOARD" />
         <div className="container1">
           <div className="container2">
             <div className="d-flex justify-content-start gap-5">
