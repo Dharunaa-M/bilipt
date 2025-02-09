@@ -4,34 +4,3 @@
     background-color: #f1efec;
     height: 100vh;
 }
-
-.frame {
-    cursor: pointer;
-    width: fit-content;
-    padding: 11px 8px 10px 7px;
-    background-color: #e9e4df;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    font-family: "Poppins";
-    font-size: 12px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.83;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000;
-}
-
-.frame span {
-    font-family: "Poppins";
-    font-size: 12px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.83;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000;
-    margin-right: 4px;
-}

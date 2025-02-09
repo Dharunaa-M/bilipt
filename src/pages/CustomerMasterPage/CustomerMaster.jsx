@@ -3,10 +3,11 @@ import { FaSave } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { RiDeleteBin6Fill } from "react-icons/ri";
+import ButtonComponent from "../../components/Button/ButtonComponent";
+import HeaderComponent from "../../components/Header/HeaderComponent";
 import InputComponent from "../../components/Input/InputComponent";
 import PaymentHistroy from "../../components/PaymentHistroy/PaymentHistroy";
 import "./customerMaster.css";
-import HeaderComponent from "../../components/Header/HeaderComponent";
 
 const CustomerMaster = () => {
   const [name, setName] = useState("");
@@ -16,24 +17,24 @@ const CustomerMaster = () => {
   const [openPayemntHistroy, setOpenPaymentHistroy] = useState(false);
 
   const handleSave = () => {
-    console.log("Save clicked!")
-  }
+    console.log("Save clicked!");
+  };
 
   const handleDelete = () => {
-    console.log("Delete clicked!")
-  }
+    console.log("Delete clicked!");
+  };
 
   const handleClear = () => {
-    console.log("Clear clicked!")
-  }
+    console.log("Clear clicked!");
+  };
 
   const handleClose = () => {
-    console.log("Close clicked")
-  }
+    console.log("Close clicked");
+  };
 
   return (
     <>
-      <div className="d-block w-100" style={{paddingLeft: "125px"}}>
+      <div className="d-block w-100" style={{ paddingLeft: "125px" }}>
         <HeaderComponent headerText="CUSTOMER MASTER" />
         <div className="customer-container">
           <InputComponent
@@ -68,26 +69,37 @@ const CustomerMaster = () => {
           />
           <div className="mt-3">
             <div className="d-flex flex-row gap-4 justify-content-end">
-              <div className="frame" onClick={() => setOpenPaymentHistroy(true)} >
-                <span>Payment Histroy</span> <FaSave />
-              </div>
-              <div className="frame" onClick={handleSave}>
-                <span>Save</span> <FaSave />
-              </div>
-              <div className="frame" onClick={handleDelete}>
-                <span>Delete</span> <RiDeleteBin6Fill />
-              </div>
-              <div className="frame" onClick={handleClear}>
-                <span>Clear</span> <MdOutlineCleaningServices />
-              </div>
-              <div className="me-4 frame" onClick={handleClose}>
-                <span>Close</span> <IoMdClose />
-              </div>
+              <ButtonComponent
+                buttonName="Payment Histroy"
+                buttonIcon={<FaSave />}
+                onClickEvent={() => setOpenPaymentHistroy(true)}
+              />
+              <ButtonComponent
+                buttonName="Save"
+                buttonIcon={<FaSave />}
+                onClickEvent={handleSave}
+              />
+              <ButtonComponent
+                buttonName="Delete"
+                buttonIcon={<RiDeleteBin6Fill />}
+                onClickEvent={handleDelete}
+              />
+              <ButtonComponent
+                buttonName="Clear"
+                buttonIcon={<MdOutlineCleaningServices />}
+                onClickEvent={handleClear}
+              />
+              <ButtonComponent
+                buttonName="Close"
+                buttonIcon={<IoMdClose />}
+                onClickEvent={handleClose}
+                marginRight="34px"
+              />
             </div>
           </div>
         </div>
         {openPayemntHistroy && (
-          <PaymentHistroy 
+          <PaymentHistroy
             show={openPayemntHistroy}
             onSet={setOpenPaymentHistroy}
             totalPayment={0}

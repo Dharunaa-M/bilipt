@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import { FaSave } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
-import { MdOutlineCleaningServices } from "react-icons/md";
-import InputComponent from "../../components/Input/InputComponent";
-import "./productMaster.css";
+import ButtonComponent from "../../components/Button/ButtonComponent";
 import HeaderComponent from "../../components/Header/HeaderComponent";
+import InputComponent from "../../components/Input/InputComponent";
 import ProductMasterTable from "../../components/ProductMasterTable/ProductMasterTable";
+import "./productMaster.css";
 
 const ProductMaster = () => {
-
-  const [showProductMasterTable, setShowProductMasterTable] = useState(false)
+  const [showProductMasterTable, setShowProductMasterTable] = useState(false);
 
   const handleView = () => {
-    setShowProductMasterTable(true)
+    setShowProductMasterTable(true);
   };
 
   const handleSave = () => {
@@ -29,7 +27,7 @@ const ProductMaster = () => {
 
   return (
     <>
-      <div className="d-block w-100" style={{paddingLeft: "125px"}}>
+      <div className="d-block w-100" style={{ paddingLeft: "125px" }}>
         <HeaderComponent headerText="PRODUCT MASTER" />
         <div>
           <div className="master-container">
@@ -79,18 +77,26 @@ const ProductMaster = () => {
             </div>
             <div className="mt-3 opt">
               <div className="d-flex flex-row gap-4 justify-content-end">
-                <div className="frame" onClick={handleView}>
-                  <span>View</span> <FaSave />
-                </div>
-                <div className="frame" onClick={handleSave}>
-                  <span>Save</span> <FaSave />
-                </div>
-                <div className="frame" onClick={handleClear}>
-                  <span>Clear</span> <MdOutlineCleaningServices />
-                </div>
-                <div className="me-4 frame" onClick={handleClose}>
-                  <span>Close</span> <IoMdClose />
-                </div>
+                <ButtonComponent
+                  buttonName="View"
+                  buttonIcon={<FaSave />}
+                  onClickEvent={handleView}
+                />
+                <ButtonComponent
+                  buttonName="View"
+                  buttonIcon={<FaSave />}
+                  onClickEvent={handleSave}
+                />
+                <ButtonComponent
+                  buttonName="View"
+                  buttonIcon={<FaSave />}
+                  onClickEvent={handleClear}
+                />
+                <ButtonComponent
+                  buttonName="View"
+                  buttonIcon={<FaSave />}
+                  onClickEvent={handleClose}
+                />
               </div>
             </div>
           </div>

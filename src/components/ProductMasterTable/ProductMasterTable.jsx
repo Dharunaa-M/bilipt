@@ -1,13 +1,14 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
-import { MdClose, MdEdit, MdSave, MdDelete } from "react-icons/md";
+import { FaSave } from "react-icons/fa";
+import { MdClose, MdDelete, MdEdit } from "react-icons/md";
+import ButtonComponent from "../Button/ButtonComponent";
 import "./productMasterTable.css";
 
 const ProductMasterTable = ({ show, onSet }) => {
-
-    const handleSave = () => {
-        onSet(false)
-    }
+  const handleSave = () => {
+    onSet(false);
+  };
 
   return (
     <>
@@ -49,11 +50,15 @@ const ProductMasterTable = ({ show, onSet }) => {
             </tbody>
           </table>
           <div className="w-100 d-flex justify-content-center align-items-center flex-row">
-                <div className="d-flex flex-row gap-5">
-                    <div className="button">Edit <MdEdit /></div>
-                    <div className="button" onClick={handleSave}>Save <MdSave /></div>
-                    <div className="button">Delete <MdDelete /></div>
-                </div>
+            <div className="d-flex flex-row gap-5">
+              <ButtonComponent buttonName="Edit" buttonIcon={<MdEdit />} />
+              <ButtonComponent
+                buttonName="Save"
+                buttonIcon={<FaSave />}
+                onClickEvent={handleSave}
+              />
+              <ButtonComponent buttonName="Delete" buttonIcon={<MdDelete />} />
+            </div>
           </div>
         </Modal.Body>
       </Modal>
