@@ -10,7 +10,7 @@ const PurchasePage = () => {
   }
 
   return (
-    <div className="d-block w-100">
+    <div className="d-block w-100" style={{paddingLeft: "125px"}}>
       <HeaderComponent headerText="PURCHASE" />
       <div className="purchase-container">
         <form>

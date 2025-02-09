@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaSave } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import InputComponent from "../../components/Input/InputComponent";
 import "./productMaster.css";
 import HeaderComponent from "../../components/Header/HeaderComponent";
+import ProductMasterTable from "../../components/ProductMasterTable/ProductMasterTable";
 
 const ProductMaster = () => {
+
+  const [showProductMasterTable, setShowProductMasterTable] = useState(false)
+
   const handleView = () => {
-    console.log("View clicked!");
+    setShowProductMasterTable(true)
   };
 
   const handleSave = () => {
@@ -25,7 +29,7 @@ const ProductMaster = () => {
 
   return (
     <>
-      <div className="d-block w-100">
+      <div className="d-block w-100" style={{paddingLeft: "125px"}}>
         <HeaderComponent headerText="PRODUCT MASTER" />
         <div>
           <div className="master-container">
@@ -92,6 +96,12 @@ const ProductMaster = () => {
           </div>
         </div>
       </div>
+      {
+        <ProductMasterTable
+          show={showProductMasterTable}
+          onSet={setShowProductMasterTable}
+        />
+      }
     </>
   );
 };

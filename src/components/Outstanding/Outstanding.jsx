@@ -21,15 +21,16 @@ const Outstanding = ({ outstandingPrice }) => {
         <h4>CUSTOMER OUTSTANDING</h4>
         <p>&#8377;{outstandingPrice}</p>
       </div>
-      <table className="table w-100 mt-4" style={tableStyle}>
+      <table className="table w-100 mt-4 table-borderless" style={tableStyle}>
         <thead>
-          <tr>
+          <tr className="table-borderless">
             <th
               className="text-start"
               style={{
                 fontFamily: "Poppins",
                 fontSize: "10px",
                 color: "#3f53b6",
+                padding: "0"
               }}
             >
               NAME
@@ -40,6 +41,7 @@ const Outstanding = ({ outstandingPrice }) => {
                 fontFamily: "Poppins",
                 fontSize: "10px",
                 color: "#3f53b6",
+                padding: "0"
               }}
             >
               PAID
@@ -51,6 +53,7 @@ const Outstanding = ({ outstandingPrice }) => {
                 fontFamily: "Poppins",
                 fontSize: "10px",
                 color: "#3f53b6",
+                padding: "0"
               }}
             >
               BALANCE
@@ -58,7 +61,7 @@ const Outstanding = ({ outstandingPrice }) => {
           </tr>
         </thead>
         <tbody className="mb-5">
-          {Array(12)
+          {Array(5)
             .fill("")
             .map((_,idx) => (
               <tr key={idx} style={tableRowStyle}>

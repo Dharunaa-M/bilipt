@@ -33,7 +33,7 @@ const CustomerMaster = () => {
 
   return (
     <>
-      <div className="d-block w-100">
+      <div className="d-block w-100" style={{paddingLeft: "125px"}}>
         <HeaderComponent headerText="CUSTOMER MASTER" />
         <div className="customer-container">
           <InputComponent

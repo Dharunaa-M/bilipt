@@ -274,3 +274,7 @@
     text-align: center;
     color: #000;
 }
+
+.outstanding .table {
+  margin-bottom: 0px !important;
+}
