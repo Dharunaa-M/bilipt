@@ -5,7 +5,7 @@ import { TbMessageDollar } from "react-icons/tb";
 const RecentInvoice = () => {
   return (
     <div className="recent-invoice">
-      <div className="invoice-heading">
+      <div className="invoice-heading-new">
         <h3>RECENT INVOICES</h3>
         <TbMessageDollar style={{ color: "#ffd405" }} />
       </div>

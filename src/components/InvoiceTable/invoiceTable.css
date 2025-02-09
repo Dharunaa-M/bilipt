@@ -1,0 +1,68 @@
+.invoice-heading {
+    background-color: rgba(241, 239, 236, 0.98);
+    display: flex;
+    gap: 600px;
+    padding-left: 34px;
+    margin-top: 38px;
+}
+
+.invoice-heading p {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+  
+}
+
+.invoice-table-data {
+    border-top: 1px solid #000;
+    background-color: rgba(241, 239, 236, 0.98);
+}
+
+.invoice-data {
+    background-color: rgba(241, 239, 236, 0.98);
+    display: flex;
+    gap: 620px;
+    padding-left: 34px;
+    margin-top: 12px;
+}
+
+.invoice-data p {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: normal;
+    color: #000;
+  
+}
+
+.total {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}

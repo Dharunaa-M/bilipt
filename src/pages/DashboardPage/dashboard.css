@@ -116,14 +116,14 @@
   padding: 13px 9px;
 }
 
-.recent-invoice .invoice-heading {
+.recent-invoice .invoice-heading-new {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4px;
 }
 
-.recent-invoice .invoice-heading h3 {
+.recent-invoice .invoice-heading-new h3 {
   font-family: "Poppins";
   font-size: 12px;
   font-weight: 500;

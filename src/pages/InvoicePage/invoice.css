@@ -3,3 +3,97 @@
     height: 100vh;
     background-color: rgba(241, 239, 236, 0.98);;
 }
+
+.sales-container .date-section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 34px;
+    padding-top: 34px;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+
+.sales-container .invoice-container-new {
+    width: 100%;
+    height: 84px;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+    border-width: 4px;
+    background-color: rgba(241, 239, 236, 0.98);
+    margin-top: 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice-container-new img {
+    width: 269px;
+    height: 84px;
+}
+
+.invoice-container-new p {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 0.95;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+
+.invoice-container-new select {
+    width: 134px;
+    height: 34px;
+    border-radius: 4px;
+    border: solid 1px #fcfcfb;
+    border-radius: 4px;
+    outline: #fcfcfb;
+    font-family: "Poppins";
+    font-size: 12px;
+    line-height: 0.95;
+    text-align: left;
+    color: #494946cf;
+    margin: 0;
+}
+
+.invoice-table {
+    margin-top: 51px ;
+}
+
+.invoice-table h6 {
+    padding-left: 34px;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: normal;
+    text-align: start;
+    color: #000;
+}
+
+.thank-you {
+    width: 100%;
+    border-top: 2px dashed  #000;
+    background-color: rgba(241, 239, 236, 0.98);
+    margin-top: 10px;
+    padding: 40px 0;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
