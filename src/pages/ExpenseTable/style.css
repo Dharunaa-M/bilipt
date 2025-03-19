@@ -1,0 +1,26 @@
+.container {
+    width: 1018px;
+    height: 796px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    background: #fcfcfb;
+    border-radius: 12px;
+}
+
+.add-btn {
+    width: fit-content;
+    height: 39px;
+    flex-grow: 0;
+    padding: 8px;
+    border-radius: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.16);
+    background-color: #e9e4df;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}

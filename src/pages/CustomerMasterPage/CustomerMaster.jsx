@@ -18,6 +18,21 @@ const CustomerMaster = () => {
 
   const handleSave = () => {
     console.log("Save clicked!");
+    const existingData = JSON.parse(localStorage.getItem("customers")) || [];
+    const newCustomer = {
+      name,
+      email,
+      phoneNumber,
+      address,
+    };
+    const updatedData = [...existingData, newCustomer];
+    localStorage.setItem("customers", JSON.stringify(updatedData));
+    setName("");
+    setEmail("");
+    setPhoneNumber("");
+    setAddress("");
+  
+    console.log("Customer data saved!", updatedData);
   };
 
   const handleDelete = () => {
@@ -26,6 +41,10 @@ const CustomerMaster = () => {
 
   const handleClear = () => {
     console.log("Clear clicked!");
+    setName("");
+    setEmail("");
+    setPhoneNumber("");
+    setAddress("");
   };
 
   const handleClose = () => {

@@ -3,10 +3,14 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { MdArrowBackIos } from "react-icons/md";
 import Assets from "../../assets/assets";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [icon, setIcon] = useState(false);
   const [changePasswordSection, setChangePasswordSection] = useState(false);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handlePasswordToggle = () => {
     setIcon((prevState) => !prevState);
@@ -15,6 +19,11 @@ const Login = () => {
   const handleChangePasswordToggle = () => {
     setChangePasswordSection(true);
   };
+
+  const handleLogin = () => {
+    localStorage.setItem('login', JSON.stringify({ name, password }));
+    navigate('/dashboard')
+  }
 
   return (
     <>
@@ -54,6 +63,8 @@ const Login = () => {
                         type="text"
                         placeholder="ENTER YOUR NAME"
                         required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </div>
                     <div>
@@ -63,6 +74,8 @@ const Login = () => {
                         placeholder="ENTER THE PASSWORD"
                         autoComplete="current-password"
                         required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                       <span
                         className="position-absolute"
@@ -78,7 +91,7 @@ const Login = () => {
                       </div>
                     </div>
                   </div>
-                  <button className="btn btn-primary w-25 p-2" type="submit">
+                  <button className="btn btn-primary w-25 p-2" type="submit" onClick={handleLogin}>
                     LOGIN
                   </button>
                 </>

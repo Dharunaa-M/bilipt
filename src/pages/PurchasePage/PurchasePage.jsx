@@ -1,26 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./purchasePage.css"
 import HeaderComponent from '../../components/Header/HeaderComponent'
 
 const PurchasePage = () => {
 
-  const handleSubmit = () => {
-    e.preventDefalut();
-    console.log("Submit is clicked!")
+  const [date, setDate] = useState("")
+  const [category, setCategory] = useState("")
+  const [amount, setAmount] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const existingData = JSON.parse(localStorage.getItem("purchase")) || [];
+
+    const newPurchase = {
+      date,
+      category,
+      amount
+    }
+
+    const updatedData = [...existingData, newPurchase];
+    localStorage.setItem("purchase", JSON.stringify(updatedData))
+    setDate("");
+    setCategory("");
+    setAmount("");
   }
 
   return (
     <div className="d-block w-100" style={{paddingLeft: "125px"}}>
       <HeaderComponent headerText="PURCHASE" />
       <div className="purchase-container">
-        <form>
+        <form  onSubmit={handleSubmit}>
           <div className="d-flex flex-row gap-5 align-items-center">
             <label>Date</label>  
-            <input type="text" placeholder='Enter the date' style={{marginLeft: "25px"}} />
+            <input 
+              type="date" 
+              className='custom-date' 
+              placeholder='Enter the date' 
+              style={{marginLeft: "25px"}} 
+              onChange={(e) => setDate(e.target.value)}
+              value={date}
+            />
           </div> 
           <div className="d-flex flex-row gap-5 align-items-center">
             <label>Category</label>  
-            <select>
+            <select onChange={(e) => setCategory(e.target.value)} value={category}>
               <option value="">Select the category</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -30,9 +54,14 @@ const PurchasePage = () => {
           </div> 
           <div className="d-flex flex-row gap-5 align-items-center">
             <label>Amount</label>  
-            <input type="number" placeholder='Enter the abount spent on purchase' />
+            <input 
+              type="number" 
+              placeholder='Enter the abount spent on purchase' 
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+            />
           </div> 
-          <button onClick={handleSubmit}>Submit</button>
+          <button>Submit</button>
         </form>
       </div>
     </div>

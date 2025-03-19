@@ -65,7 +65,25 @@
 
 .master-container .gst {
     grid-row: 3;
-    grid-column: 3/4;       
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.gst select {
+    width: 318px;
+    height: 34px;
+    border-radius: 4px;
+    border: solid 1px #fcfcfb;
+    border-radius: 4px;
+    outline: #fcfcfb;
+    font-family: "Poppins";
+    font-size: 12px;
+    line-height: 0.95;
+    text-align: left;
+    color: #494946cf;
+    margin: 0;
 }
 
 .master-container .opt {
