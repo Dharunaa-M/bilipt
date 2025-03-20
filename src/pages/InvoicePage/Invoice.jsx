@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Assets from "../../assets/assets";
 import HeaderComponent from "../../components/Header/HeaderComponent";
 import InvoiceTable from "../../components/InvoiceTable/InvoiceTable";
 import "./invoice.css";
 
 const Invoice = () => {
+
+  const [productDetails, setProductDetails] = useState([])
+
+  useEffect(() => {
+    const storedProducts = JSON.parse(localStorage.getItem("productDetails")) || []
+    setProductDetails(storedProducts)
+  }, [])
+  
   return (
     <>
       <div className='"d-block w-100' style={{ paddingLeft: "125px" }}>
         <HeaderComponent headerText="SALES INVOICE" />
         <div className="sales-container">
-          <div className="date-section">Date: dd/mm/yy</div>
+          <div className="date-section">Date: 21/03/2025</div>
           <div className="invoice-container-new">
             <div className="d-flex flex-row gap-5 align-items-center">
               <img src={Assets.Logo} alt="" />
@@ -34,7 +42,7 @@ const Invoice = () => {
           </div>
           <div className="invoice-table">
             <h6>Dharun Dayaal</h6>
-            <InvoiceTable subTotal={600} discount={60} tax={20} total={620} />
+            <InvoiceTable invoiceData={productDetails} />
             <div className="thank-you">...Thank You...</div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Navbar from "../Navbar/Navbar";
 import CustomerMasterTable from "../../pages/CustomerTable";
 import ProductTable from "../../pages/ProductTable";
 import ExpenseTable from "../../pages/ExpenseTable";
+import InvoiceDetails from "../../pages/InvoiceDetails";
 
 const AppRouter = () => {
   return (
@@ -23,6 +24,7 @@ const AppRouter = () => {
           <Route path="/productmaster" element={<ProductMaster />} />
           <Route path="/viewproduct" element={<ProductTable />} />
           <Route path="/invoice" element={<Invoice />} />
+          <Route path="/invoicedetails" element={<InvoiceDetails />} />
           <Route path="/purchasedetails" element={<ExpenseTable />} />
           <Route path="/purchase" element={<PurchasePage />} />
         </Route>

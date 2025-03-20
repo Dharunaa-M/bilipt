@@ -12,10 +12,10 @@ const ProductTable = () => {
     }
 
     useEffect(() => {
-        const storedProducts = JSON.parse(localStorage.getItem("productDetails")) | []
+        const storedProducts = JSON.parse(localStorage.getItem("productDetails")) || []
         setProductDetails(storedProducts)
     },[])
-
+console.log(productDetails)
   return (
     <>
         <div className="d-block w-100" style={{paddingLeft: "125px", background: "rgba(241, 239, 236, 0.98)"}}>
@@ -38,7 +38,8 @@ const ProductTable = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {productDetails.length > 0 ? (
+                            {
+                            productDetails.length > 0 ? (
                                 productDetails.map((product, idx) => (
                                     <tr className='' key={idx}>
                                         <td className="pt-4 text-center">

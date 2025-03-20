@@ -2,7 +2,9 @@ import React from 'react'
 
 const Graph = ({ classname1 }) => {
   return (
-    <div className={classname1} >Graph</div>
+    <div className={classname1} >
+      <img src="/image.png" alt="img" style={{width: "1017px", height: "343px"}} />
+    </div>
   )
 }
 

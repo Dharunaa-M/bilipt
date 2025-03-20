@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link to="/viewproduct" className="link">
               <BsBoxFill className="icon" /> <span>Product Master</span>
             </Link>
-            <Link to="/invoice" className="link">
+            <Link to="/invoicedetails" className="link">
               <FaFileInvoiceDollar className="icon" /> <span>Sales Invoice</span>
             </Link>
             <Link to="/purchasedetails" className="link">

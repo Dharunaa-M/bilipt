@@ -16,6 +16,15 @@ const Dashboard = () => {
     <>
       <div className="d-block w-100" style={{paddingLeft: "125px"}}>
         <HeaderComponent headerText="DASHBOARD" />
+          <div className="d-flex flex-row-reverse gap-0 align-items-center w-100 py-4" style={{background: "rgba(241, 239, 236, 0.98)"}}>
+              <button className="btn btn-primary">Check</button>
+              <input 
+                type="date" 
+                className='custom-date' 
+                placeholder='Enter the date' 
+                style={{marginLeft: "25px"}} 
+                />
+            </div> 
         <div className="container1">
           <div className="container2">
             <div className="d-flex justify-content-start gap-5">
