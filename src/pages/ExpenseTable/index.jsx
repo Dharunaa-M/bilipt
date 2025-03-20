@@ -12,7 +12,7 @@ const ExpenseTable = () => {
     }
 
     useEffect(() => {
-        const puchaseData = JSON.parse(localStorage.getItem("purchase"))
+        const puchaseData = JSON.parse(localStorage.getItem("purchase")) | []
         setPurchaseDetails(puchaseData)
     }, [])
 
@@ -35,19 +35,25 @@ const ExpenseTable = () => {
                         </thead>
                         <tbody>
                             {
-                                purchaseDetails.map((purchase, idx) => (
-                                    <tr className=''>
-                                        <td className="pt-4 text-center">
-                                            <span style={{background: "#f1efec"}} className='p-2 w-100 rounded-3'>{purchase.date}</span>
-                                        </td>
-                                        <td className='pt-4 text-center'>
-                                            <span style={{background: "#f1efec"}} className='p-2 w-100 rounded-3'>{purchase.category}</span>
-                                        </td>
-                                        <td className='pt-4 text-center data'>
-                                            <span style={{background: "#f1efec"}} className='p-2 w-100 rounded-3'>{purchase.amount}</span>
-                                        </td>
+                                purchaseDetails.length > 0 ? (
+                                    purchaseDetails.map((purchase, idx) => (
+                                        <tr className=''>
+                                            <td className="pt-4 text-center">
+                                                <span style={{background: "#f1efec"}} className='p-2 w-100 rounded-3'>{purchase.date}</span>
+                                            </td>
+                                            <td className='pt-4 text-center'>
+                                                <span style={{background: "#f1efec"}} className='p-2 w-100 rounded-3'>{purchase.category}</span>
+                                            </td>
+                                            <td className='pt-4 text-center data'>
+                                                <span style={{background: "#f1efec"}} className='p-2 w-100 rounded-3'>{purchase.amount}</span>
+                                            </td>
+                                        </tr>
+                                    ))
+                                ) : (
+                                    <tr>
+                                        <td colSpan="8" className="text-center py-4">No expense available</td>
                                     </tr>
-                                ))
+                                )
                             }
                         </tbody>
                     </table>
